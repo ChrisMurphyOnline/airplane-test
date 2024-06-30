@@ -161,7 +161,7 @@ public class GameConfig implements Cloneable{
 			}
 		}
 		
-		File sourceFolder = new File("out/production/airplane1/airplane/");
+		File sourceFolder = new File("out/production/airplane-test/airplane/");
 		for(File f : sourceFolder.listFiles())
 		{
 			if(f.getName().length() == 2 && f.getName().substring(0,1).equals("g"))
