@@ -75,7 +75,7 @@ public final class ControlPanel extends JPanel{
 		//add(tournament);
 		//add(boardPanel);
 		
-		JLabel label = new JLabel("Step: ");
+		JLabel label = new JLabel("Time: ");
 		roundText = new JTextField();
 		roundText.setEnabled(false);
 		roundText.setEditable(false);
