@@ -1,4 +1,5 @@
 #Overview
+
 Airplane traffic control (ATC) is responsible for helping aircraft navigation by identifying routes such that aircraft can get to their destinations as quickly as possible, but at the same time avoiding or preventing collisions with other aircraft.
 
 In this project, you will implement an ATC strategy in which you are given a configuration file that specifies the following for a set of _p_ planes:
@@ -28,6 +29,7 @@ The amount of time the planes spend in the air is considered to be the amount of
 Additionally, if a plane stays on the ground after its departure time, this is considered a "delay"; you should attempt to minimize this value, too, but focus on getting all planes to their destinations as quickly as possible.
 
 #Setting Up
+
 One member of your team should [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repo so that your team can submit your solution.
 Other members of the team should work with that same fork.
 
