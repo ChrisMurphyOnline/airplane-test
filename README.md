@@ -1,3 +1,4 @@
+#Overview
 Airplane traffic control (ATC) is responsible for helping aircraft navigation by identifying routes such that aircraft can get to their destinations as quickly as possible, but at the same time avoiding or preventing collisions with other aircraft.
 
 In this project, you will implement an ATC strategy in which you are given a configuration file that specifies the following for a set of _p_ planes:
@@ -25,3 +26,15 @@ The simulation ends when each plane has reached its destination.
 
 The amount of time the planes spend in the air is considered to be the amount of "power" used: you should be attempting to minimize power in addition to minimizing the time it takes to get all planes to their destinations. 
 Additionally, if a plane stays on the ground after its departure time, this is considered a "delay"; you should attempt to minimize this value, too, but focus on getting all planes to their destinations as quickly as possible.
+
+#Setting Up
+One member of your team should [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repo so that your team can submit your solution.
+Other members of the team should work with that same fork.
+
+Then, [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) your forked repo (or just download the code) to your local computer so that you can work with the code and run the simulator.
+
+Once you have downloaded the code, open IntelliJ IDEA, select "Open" to open an existing project, and select the folder containing the files in this repo.
+
+IntelliJ should compile and build the code for you.
+
+#Implementing Your Solution
