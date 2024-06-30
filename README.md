@@ -37,4 +37,31 @@ Once you have downloaded the code, open IntelliJ IDEA, select "Open" to open an 
 
 IntelliJ should compile and build the code for you.
 
-#Implementing Your Solution
+Run "airplane.sim.GameEngine.main()" and you should see the simulator UI launch. 
+You can configure:
+* the Java class to use for your ATC strategy
+* the configuration file indicating each plane’s initial location, destination, and departure time
+* the delay of refreshing the UI
+
+To run a simulation:
+* Click "Begin New Game" to start the simulation.
+* Click "Step" to move ahead one unit of time.
+* Click "Play" to move continuously
+* Click "Pause" to temporarily pause the game.
+* Click "Resign" to quit.
+
+When the simulation ends, you will see the total simulation time, the amount of power used by all airplanes (time they were in the air), and total delay.
+
+# Implementing Your Solution
+Create a class called airplane.g_X_.GroupXPlayer where _X_ is your group number. 
+This class must:
+* extend airplane.sim.Player
+* implement the getName, startNewGame, and updatePlanes methods
+* See airplane.g0.SerializedPlayer for an example.
+  
+The *startNewGame* method is called at the beginning of the simulation, and provides a List of Plane objects, which include the current location (which, at this point, is its origin), destination, current bearing (which will be -1 since it’s on the ground) and departure time of each flight.
+Then, at each step in the simulation, the updatePlanes method is called. The arguments are the List of Plane objects (with their current location and bearing), the round number, and an array of bearings; your method should update and then return that array.
+To determine the bearing needed to get from point A to point B, you can call the calculateBearing method in the Player superclass.
+Your player may also run simulations within the simulation, e.g. to determine whether planes will collide or how close they may get to each other before actually committing to those moves. At any point in your player’s execution, it may call the startSimulation method. This will repeatedly call your player’s simulateUpdate method and then update the simulated planes accordingly. You may terminate the simulation at any point by calling stopSimulation. Otherwise, the simulation will run until all planes have reached their destinations, at which point startSimulation will finish. The return value of startSimulation is a SimulationResult object that indicates the time at which the simulation stopped, the reason for stopping, and the List of Planes at the point when the simulation finished.
+To add your Player to the application, add the name of your class to airplane.xml in the "airplane .classes" entry (if you have more than one, the class names should be separated by whitespace).
+Note: To do logging/debugging, do not use System.out.println or System.err.println. Rather, create a Logger instance (see SerializedPlayer for an example) and then call its trace, debug, info, warn, or error method and pass the String to appear in the console.
