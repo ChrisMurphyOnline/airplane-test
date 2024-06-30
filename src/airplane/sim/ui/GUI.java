@@ -47,7 +47,7 @@ import airplane.sim.GameListener;
 public final class GUI extends JFrame implements ActionListener, GameListener, ChangeListener
 {
 	private final static String VERSION = "1.1";
-	private final static String TITLE = "CIS 700 Fall 2013 - Airplanes";
+	private final static String TITLE = "CIS 5590 Summer 2024 - Airplanes";
 	
 	private GameEngine engine;
 	private static final long serialVersionUID = 1L;
